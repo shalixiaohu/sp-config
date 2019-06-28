@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: zuul
+    
+server:
+  port: 3001
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+#zuul是默认配置  如果不配 会默认从注册中心获取 服务
+#zuul:
+#  routes:
+#    item-service: /item-service/**
+#    user-service: /user-service/**
+#    order-service: /order-service/**
+
+#开启ribbon重试   1. 先引入jar包
+#<dependency>
+#  <groupId>org.springframework.retry</groupId>
+#  <artifactId>spring-retry</artifactId>
+#</dependency>
+zuul:
+  retryable: true
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
+  MaxAutoRetriesNextServer: 1
+  MaxAutoRetries: 1
+#   降级超时   10秒内有 20此请求  50%的失败  开启断路器  直接降级 过一段时间重试  通 关闭断路器  关 继续开启断路器
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
+# 暴露监控端点   zuul默认 包含 actuator 依赖  暴露依赖
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
