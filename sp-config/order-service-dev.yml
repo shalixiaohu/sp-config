@@ -8,13 +8,14 @@ spring:
     password: admin
 #server:
 #  port: 8201
-#�޸������ļ�11111111111
+#ÐÞ¸ÄÅäÖÃÎÄ¼þ11111111111
+#为什么中文会出现乱码
 eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka1:2002/eureka
 
-#启用hystrix 
+#å¯ç”¨hystrix 
 feign:
   hystrix:
     enabled: true
