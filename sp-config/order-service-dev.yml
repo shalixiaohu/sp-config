@@ -11,11 +11,8 @@ spring:
 #为什么中文会出现乱码
 #第一次提交
 #第二次提交
-<<<<<<< HEAD
 #第三次提交
-=======
 #阿发嘎嘎
->>>>>>> branch 'master' of https://github.com/shalixiaohu/sp-config
 eureka:
   client:
     service-url:
