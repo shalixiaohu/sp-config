@@ -11,6 +11,7 @@ spring:
 # 配置新的信息
 #你在干什么
 #发生冲突
+#滑阿萨法
 eureka:
   client:
     service-url:
