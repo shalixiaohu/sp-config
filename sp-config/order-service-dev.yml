@@ -11,6 +11,7 @@ spring:
 #为什么中文会出现乱码
 #第一次提交
 #第二次提交
+#阿发嘎嘎
 eureka:
   client:
     service-url:
