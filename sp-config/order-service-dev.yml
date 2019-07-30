@@ -8,8 +8,8 @@ spring:
     password: admin
 #server:
 #  port: 8201
-#ÐÞ¸ÄÅäÖÃÎÄ¼þ11111111111
 #为什么中文会出现乱码
+#第一次提交
 eureka:
   client:
     service-url:
