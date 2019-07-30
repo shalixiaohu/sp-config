@@ -9,6 +9,7 @@ spring:
 #server:
 #  port: 8001
 # 配置新的信息
+#你在干什么
 eureka:
   client:
     service-url:
