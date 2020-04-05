@@ -11,6 +11,8 @@ spring:
     name: user-service
     111111111
     333333333
+    222222222
+
 server:
   port: 8101
 eureka:
